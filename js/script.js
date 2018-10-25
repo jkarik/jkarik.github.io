@@ -9,3 +9,9 @@ function closeNav() {
     document.getElementById("show-menu").style.opacity = "0";
     document.getElementById("show-menu").style.left = "-120vw";
 }
+
+window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
