@@ -25,12 +25,12 @@ h2 {
   font-weight: 900; }
   @media (max-width: 768px) {
     h2 {
-      font-size: 45px;
-      line-height: 52px; } }
+      font-size: 45px !important;
+      line-height: 52px !important; } }
   @media (max-width: 576px) {
     h2 {
-      font-size: 28px;
-      line-height: 32px; } }
+      font-size: 28px !important;
+      line-height: 32px !important; } }
 
 h3 {
   line-height: 62px;
@@ -38,12 +38,12 @@ h3 {
   font-weight: 900; }
   @media (max-width: 768px) {
     h3 {
-      font-size: 45px;
-      line-height: 52px; } }
+      font-size: 45px !important;
+      line-height: 52px !important; } }
   @media (max-width: 576px) {
     h3 {
-      font-size: 27px;
-      line-height: 31px; } }
+      font-size: 27px !important;
+      line-height: 31px !important; } }
 
 h4 {
   font-size: 24px;
@@ -51,12 +51,12 @@ h4 {
   line-height: 36px; }
   @media (max-width: 768px) {
     h4 {
-      font-size: 20px;
-      line-height: 28px; } }
+      font-size: 20px !important;
+      line-height: 28px !important; } }
   @media (max-width: 576px) {
     h4 {
-      font-size: 16px;
-      line-height: 28px; } }
+      font-size: 16px !important;
+      line-height: 28px !important; } }
 
 .container {
   padding-left: 30px !important;
@@ -125,13 +125,13 @@ h4 {
       pointer-events: none; }
       .main-nav nav a.active:hover {
         color: #FFFFFF; }
-    @media (max-width: 930px) {
+    @media (max-width: 880px) {
       .main-nav nav {
         display: none; } }
   .main-nav .menu-icons {
     margin-top: 1px;
     float: right; }
-    @media (max-width: 930px) {
+    @media (max-width: 880px) {
       .main-nav .menu-icons {
         display: none; } }
   .main-nav .menu-icon {
@@ -176,7 +176,7 @@ h4 {
     cursor: pointer; }
     .main-nav .nav-icon:hover {
       background: url(../assets/images/menu-icon-hover.svg) center/contain no-repeat; }
-    @media (max-width: 930px) {
+    @media (max-width: 880px) {
       .main-nav .nav-icon {
         display: block; } }
   .main-nav .show-menu {
@@ -210,11 +210,32 @@ h4 {
   .main-nav .show-menu .mobile-menu {
     position: relative;
     box-sizing: border-box;
-    padding: 100px 60px 0;
+    padding: 100px 60px 30px;
     width: 100%;
     height: 100%;
     display: block;
     z-index: 98; }
+    .main-nav .show-menu .mobile-menu .social-icons {
+      display: none;
+      box-sizing: border-box;
+      position: absolute;
+      bottom: 30px;
+      width: calc(100% - 120px);
+      height: 40px;
+      justify-content: space-between; }
+      .main-nav .show-menu .mobile-menu .social-icons a {
+        width: 40px;
+        height: 40px; }
+        .main-nav .show-menu .mobile-menu .social-icons a:hover {
+          text-decoration: none;
+          opacity: 0.7; }
+      @media (max-width: 480px) {
+        .main-nav .show-menu .mobile-menu .social-icons {
+          display: flex;
+          width: calc(100% - 60px); } }
+    @media (max-width: 480px) {
+      .main-nav .show-menu .mobile-menu {
+        padding: 100px 30px 30px; } }
   .main-nav .show-menu .mobile-menu .ll1 {
     float: left;
     width: 100%;
@@ -261,6 +282,10 @@ h4 {
         float: left; }
       .main-nav .bottom-mobile-menu .menu-icon:nth-child(2) {
         float: right; }
+    @media (max-width: 480px) {
+      .main-nav .bottom-mobile-menu {
+        bottom: 100px;
+        width: calc(100% - 60px); } }
 
 .first-block {
   position: relative;
@@ -271,6 +296,21 @@ h4 {
   z-index: 100; }
   .first-block .row-text {
     width: 100%; }
+    @media (max-width: 480px) {
+      .first-block .row-text {
+        align-self: flex-start !important;
+        margin: 15vh auto 0;
+        height: 85vh; } }
+  @media (max-width: 480px) {
+    .first-block .red-btn {
+      position: absolute;
+      width: 204px;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      display: block;
+      text-align: center;
+      margin: 0 auto; } }
   .first-block .container {
     position: relative; }
   .first-block .main-info {
@@ -279,14 +319,23 @@ h4 {
     @media (min-width: 1025px) {
       .first-block .main-info {
         margin-left: 8.333333%; } }
+    @media (max-width: 480px) {
+      .first-block .main-info {
+        height: 100%; } }
   .first-block h2 {
     color: #FFFFFF; }
     .first-block h2 span {
       color: #FF5847; }
+    @media (max-width: 480px) {
+      .first-block h2 {
+        text-align: center; } }
   .first-block .bottom-text {
     max-width: 480px;
     margin: 30px 0 36px;
     color: #FFFFFF; }
+    @media (max-width: 480px) {
+      .first-block .bottom-text {
+        text-align: center; } }
   .first-block .outer-contact-icons {
     position: absolute;
     bottom: 0;
@@ -306,9 +355,9 @@ h4 {
           display: inline-block;
           position: relative;
           color: #FFFFFF;
-          vertical-align: -1px;
           margin-left: 5px;
           font-weight: 400;
+          line-height: 18px;
           cursor: pointer; }
           .first-block .outer-contact-icons .contact-icons a p:before {
             content: '';
@@ -317,8 +366,26 @@ h4 {
             top: 0;
             width: 53px;
             height: 39px; }
+            @media (max-width: 800px) {
+              .first-block .outer-contact-icons .contact-icons a p:before {
+                top: 3px;
+                left: -43px;
+                width: 49px;
+                height: 35px; } }
+            @media (max-width: 700px) {
+              .first-block .outer-contact-icons .contact-icons a p:before {
+                top: 2px;
+                left: -38px;
+                width: 47px;
+                height: 33px; } }
           .first-block .outer-contact-icons .contact-icons a p:hover {
             color: #681D7E; }
+          @media (max-width: 800px) {
+            .first-block .outer-contact-icons .contact-icons a p {
+              font-size: 13px; } }
+          @media (max-width: 700px) {
+            .first-block .outer-contact-icons .contact-icons a p {
+              font-size: 12px; } }
         .first-block .outer-contact-icons .contact-icons a .tg-icon:before {
           background: url(../assets/images/telegram-icon.svg) left top/contain no-repeat; }
         .first-block .outer-contact-icons .contact-icons a .tg-icon:hover:before {
@@ -341,6 +408,9 @@ h4 {
           background: url(../assets/images/medium-icon-hover.svg) left top/contain no-repeat; }
         .first-block .outer-contact-icons .contact-icons a:nth-last-child(1) {
           margin-right: 30px; }
+          @media (max-width: 880px) {
+            .first-block .outer-contact-icons .contact-icons a:nth-last-child(1) {
+              margin-right: 0; } }
       .first-block .outer-contact-icons .contact-icons .icon {
         width: 42px;
         height: 42px;
@@ -365,17 +435,28 @@ h4 {
         .first-block .outer-contact-icons .contact-icons {
           width: 91.777777%;
           margin-left: 8.333333%; } }
+      @media (max-width: 800px) {
+        .first-block .outer-contact-icons .contact-icons {
+          padding-left: 30px; } }
+    @media (max-width: 640px) {
+      .first-block .outer-contact-icons {
+        display: none; } }
   .first-block .phone {
     position: absolute;
     width: 87%;
     height: 86vh;
     bottom: 0;
-    right: 10%;
+    right: 5%;
     z-index: 4;
     background: url(../assets/images/phone.png) right bottom/contain no-repeat; }
-    @media (max-width: 1024px) {
+    @media (max-width: 780px) {
       .first-block .phone {
-        right: 4%; } }
+        right: 2%; } }
+    @media (max-width: 480px) {
+      .first-block .phone {
+        height: 60vh;
+        width: 82%;
+        right: 14%; } }
 
 .what-is-tael-block {
   position: relative;
@@ -388,6 +469,9 @@ h4 {
     color: #1C1D1E;
     text-align: center;
     margin: 30px auto 60px; }
+    @media (max-width: 480px) {
+      .what-is-tael-block p {
+        margin: 30px auto 40px; } }
   .what-is-tael-block .phone {
     height: 55vh;
     overflow: hidden; }
@@ -395,6 +479,9 @@ h4 {
       width: 42vh;
       margin: 0 auto;
       display: block; }
+  @media (max-width: 480px) {
+    .what-is-tael-block {
+      padding-top: 35px; } }
 
 .flow-block {
   position: relative;
@@ -445,21 +532,30 @@ h4 {
     background-color: #D9E1F9; }
   .flow-block .carousel-indicators .active {
     background: #5661E8; }
+  @media (max-width: 480px) {
+    .flow-block {
+      padding: 35px 0 60px; } }
 
 .advantages-section {
   position: relative;
   background-color: #FFFFFF; }
   .advantages-section .advantages-block {
-    padding: 80px 0; }
+    padding: 120px 0 0; }
     .advantages-section .advantages-block h3 {
       color: #1C1D1E;
       text-align: left; }
+      @media (max-width: 480px) {
+        .advantages-section .advantages-block h3 {
+          text-align: center; } }
     .advantages-section .advantages-block .advantage-image {
       width: 100%; }
     .advantages-section .advantages-block .advantage-image:after {
       content: "";
       display: block;
       padding-bottom: 100%; }
+      @media (max-width: 480px) {
+        .advantages-section .advantages-block .advantage-image:after {
+          padding-bottom: 70%; } }
     .advantages-section .advantages-block .img-1 {
       background: url(../assets/images/advantages1.png) center/cover no-repeat; }
     .advantages-section .advantages-block .img-2 {
@@ -472,6 +568,10 @@ h4 {
       margin: 30px 0; }
       .advantages-section .advantages-block p .blue-text {
         color: #5661E8; }
+      @media (max-width: 480px) {
+        .advantages-section .advantages-block p {
+          text-align: center;
+          margin: 20px 0; } }
     .advantages-section .advantages-block span {
       font-weight: 400; }
     .advantages-section .advantages-block .advantages-text {
@@ -479,16 +579,29 @@ h4 {
       cursor: pointer; }
       .advantages-section .advantages-block .advantages-text:hover {
         color: #681D7E; }
-      @media (max-width: 992px) {
+      @media (max-width: 1024px) {
         .advantages-section .advantages-block .advantages-text {
           padding: 0 10%; } }
+      @media (max-width: 480px) {
+        .advantages-section .advantages-block .advantages-text {
+          text-align: center;
+          margin-top: 30px;
+          padding: 0; } }
     .advantages-section .advantages-block [class*='col-lg-6'] {
       padding-right: 0;
       padding-left: 0; }
+    .advantages-section .advantages-block:nth-last-child(1) {
+      padding-bottom: 120px; }
+      @media (max-width: 480px) {
+        .advantages-section .advantages-block:nth-last-child(1) {
+          padding-bottom: 30px; } }
+    @media (max-width: 480px) {
+      .advantages-section .advantages-block {
+        padding-top: 60px; } }
 
 .loyalty-system-section {
   position: relative;
-  padding: 70px 50px 100px;
+  padding: 70px 80px 100px;
   background-color: #F7F8FB; }
   .loyalty-system-section .loyalty-system-blocks {
     margin-top: 100px; }
@@ -502,7 +615,7 @@ h4 {
         .loyalty-system-section .loyalty-system-blocks p {
           text-align: center;
           width: 80%;
-          margin: 0 auto 60px; } }
+          margin: 0 auto 40px; } }
     @media (max-width: 768px) {
       .loyalty-system-section .loyalty-system-blocks {
         margin-top: 50px; } }
@@ -512,9 +625,11 @@ h4 {
     font-size: 42px;
     line-height: 44px; }
   .loyalty-system-section h4 {
+    width: 200px;
     margin: 32px 0 26px; }
     @media (max-width: 768px) {
       .loyalty-system-section h4 {
+        width: 100%;
         text-align: center; } }
   .loyalty-system-section img {
     display: block;
@@ -525,6 +640,9 @@ h4 {
     @media (max-width: 768px) {
       .loyalty-system-section img {
         margin: 0 auto; } }
+  @media (max-width: 480px) {
+    .loyalty-system-section {
+      padding: 40px 0; } }
 
 .meet-team-section {
   position: relative;
@@ -537,19 +655,13 @@ h4 {
     @media (max-width: 992px) {
       .meet-team-section h2 {
         margin-bottom: 70px; } }
-  .meet-team-section .row-one {
-    position: relative;
-    z-index: 10; }
-  .meet-team-section .row-two {
-    position: relative;
-    margin-top: 30px;
-    z-index: 11; }
   .meet-team-section .team-member {
-    height: 380px;
+    height: 370px;
     width: 100%;
     box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 35px 15px;
+    margin-top: 30px;
     background-color: #FFFFFF; }
     .meet-team-section .team-member img {
       display: block;
@@ -617,7 +729,7 @@ h4 {
     margin: 5px auto 0; }
   @media (max-width: 992px) {
     .meet-team-section {
-      padding: 50px 0; } }
+      padding: 60px 0; } }
 
 .news-section {
   position: relative;
@@ -639,9 +751,19 @@ h4 {
     .news-section .news-block p {
       text-overflow: ellipsis;
       height: 100px; }
+    @media (max-width: 992px) {
+      .news-section .news-block {
+        width: 390px !important;
+        height: 570px; } }
+    @media (max-width: 480px) {
+      .news-section .news-block {
+        width: calc(100vw - 45px) !important; } }
   .news-section .slick-list {
     padding-left: 20%;
     padding-bottom: 40px; }
+    @media (max-width: 480px) {
+      .news-section .slick-list {
+        padding-left: 15px; } }
   .news-section .slick-slide {
     outline: 0 !important; }
   .news-section .slick-next {
@@ -690,11 +812,20 @@ h4 {
     color: #1C1D1E;
     text-align: center; }
   .brands-section img {
+    display: block;
     width: 100%;
-    margin: 80px 0; }
+    margin: 80px auto; }
+    .brands-section img .d-sm-none {
+      width: 85%; }
+    @media (max-width: 480px) {
+      .brands-section img {
+        margin: 40px 0; } }
   .brands-section .blue-btn {
     display: block;
     margin: 0 auto; }
+  @media (max-width: 480px) {
+    .brands-section {
+      padding: 40px 0 60px; } }
 
 .contact-section {
   position: relative;
@@ -729,19 +860,37 @@ h4 {
     color: #1C1D1E;
     padding-bottom: 24px;
     border-bottom: 1px solid #6B747D; }
+    @media (max-width: 576px) {
+      .footer .title {
+        font-size: 28px;
+        text-align: center; } }
   .footer .copyright {
     color: #6B747D;
     font-weight: 300; }
+    @media (max-width: 576px) {
+      .footer .copyright {
+        text-align: center;
+        margin: 25px 0 35px; } }
   .footer .social-icons {
     float: right;
-    margin-top: 5px; }
+    margin-top: 5px;
+    max-width: 350px;
+    min-width: 300px;
+    display: flex;
+    justify-content: space-between; }
     .footer .social-icons a {
       width: 40px;
-      height: 40px;
-      margin-left: 15px; }
+      height: 40px; }
       .footer .social-icons a:hover {
         text-decoration: none;
         opacity: 0.7; }
+    @media (max-width: 576px) {
+      .footer .social-icons {
+        float: unset;
+        margin: 15px auto 0; } }
+  @media (max-width: 992px) {
+    .footer {
+      padding: 10px 0; } }
 
 @media (min-width: 576px) {
   .container {
