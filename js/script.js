@@ -19,3 +19,20 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+$(document).ready(function() {
+
+    $('a.slide-to[href^="#"]').bind('click.smoothscroll', function (e) {
+
+        var offset = 0;
+        var target = this.hash,
+            $target = $(target);
+
+        $('html, body').stop().animate({
+            'scrollTop': $(target).offset().top - offset
+        }, 1000, 'swing', function () {
+            // window.location.hash = target;
+        });
+    });
+
+});
